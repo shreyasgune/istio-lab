@@ -67,7 +67,7 @@ export SECURE_INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressga
 ### Sidecar Injection
 ```
 # Automatic Injection
-kubectl label namespace istio-dev istio-injection=enabled
+kubectl label namespace default istio-injection=enabled
 
 # verify
 kubectl get namespace -L istio-injection
