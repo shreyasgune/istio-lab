@@ -1,0 +1,15 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: istio-demo-vs
+spec:
+  hosts:
+    - 'istio.demo'
+  gateways:
+    - gateway
+  http:
+    - route:
+      - destination:
+          host: istio-demo.default.svc.cluster.local
+          port:
+            number: 80
